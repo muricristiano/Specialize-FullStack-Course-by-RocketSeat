@@ -1,0 +1,1 @@
+console.log(axios.get('https://api.github.com/users/muricristiano'))

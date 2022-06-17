@@ -27,6 +27,7 @@ const promessa = new Promise((resolve, reject) => { // Devemos atribuir a promis
 console.log('Aguardando');
 
 
+// Sintaxe do tratamento pós função da promessa, a finalização.
 
 promessa // em processo: pending
     .then(result => console.log(result)) // .then = fulfilled

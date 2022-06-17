@@ -1,6 +1,6 @@
 /* 
     setTimeout
-    - É uma função nativa do JS, que recebe como parâmetro uma função, e um tempo em milisegundos para essa função ser executada.
+    - É uma função nativa do JS, que recebe como parâmetro uma função a ser executada, e um tempo em milisegundos para essa função ser executada.
 */
 
 function mensagem(){
