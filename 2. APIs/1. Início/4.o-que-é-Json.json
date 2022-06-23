@@ -1,0 +1,22 @@
+{
+    "nome": "Murilo Ribeiro Cristiano",
+    "cidade": "São José",
+    "telefone": 48988394527,
+    "livros_favoritos": [
+        "Os quatro compromissos",
+        "Poder de vontade",
+        "O poder do silêncio"
+        ],
+    "hobbies": {
+        "dia_de_semana": [
+            "Estudar programação",
+            "Estudar espiritualidade",
+            "Estudar eficiência"
+        ],
+        "final_de_semana": [
+            "Fazer trilhas",
+            "Viajar",
+            "Praia"
+        ]
+    }
+}
