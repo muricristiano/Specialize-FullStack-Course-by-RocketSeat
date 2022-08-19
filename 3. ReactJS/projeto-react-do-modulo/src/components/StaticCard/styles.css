@@ -1,0 +1,20 @@
+.staticcard { /* Seleção de classe */
+    height: 100%;
+    width: 50%;
+  
+    background: #735bf2;
+    color: #fff;
+  
+    border-radius: 10px;
+    margin-bottom: 20px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+  }
+  
+.staticcard strong { /* Seleção de strong filho de classe especificada */
+  font-size: 18px;
+
+}

@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    margin: 84px 0 24px;
+}
+
+.container input{
+    width: 50%;
+    padding: 24px;
+
+    background: #e6e6e6;
+    border-radius: 5px;
+    border: none;
+
+    font-size:16px
+}
+
+.container button{
+    width: 50%;
+    padding: 24px;
+    font-weight: bold;
+
+    background: #2ab483;
+    color: white;
+
+    border-radius: 5px;
+    margin: 12px 0 84px;
+    border: none;
+
+    cursor: pointer;
+    transition: filter 0.5s; /* Tempo de transição para executar o efeito do :hover, estilização abaixo */
+
+    font-size: 16px;
+}
+
+.container button:hover{
+    filter: brightness(1.2);  
+    /* Aqui está o filter e o que será alterado
+    
+    O número é um multiplicador:
+
+    podemos ir de 
+    
+    0: totalmente preto
+
+    de 0.01 a 0.99: variações de brilho menor.
+
+    1: alteração nula, continua o mesmo brilho
+
+    acima de 1: qualquer número decimal como 1.01, começa a aumentar o brilho, para chegar no branco, depende do brilho atual da cor
+    
+    */
+}

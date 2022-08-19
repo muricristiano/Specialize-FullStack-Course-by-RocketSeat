@@ -2,5 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: lightgrey;
 }
+
+/* Aplicando fontes personalizadas. */
+body,
+input,
+button {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  --webkit-font-smoothing: antialiased; /* Propriedade que suaviza as bordas da fonte */
+}
+
+/* Essa forma de selecionar os elementos acima no css, permite uma melhor forma de visualizar o que está sendo selecionado, e separando por vírgulas, significa que está selecionando cada um de forma global individualmente */
