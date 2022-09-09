@@ -1,0 +1,57 @@
+<!-- 
+
+    transistion-property - é a propriedade css que queremos aplicar a transição
+
+    transition-duration - é o tempo de duração da transição
+
+    Somente valores quantificáveis podem ser animados. Isso quer dizer que não é possível fazer uma animação de display indo de none para block, mas sim de opacity de 0 para 1;
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transition</title>
+</head>
+
+<body>
+    <!-- Criação do nosso elemento. -->
+<div class="box-red"></div>
+
+
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;   
+    }
+
+    
+    .box-red {
+        /* Propriedades do elemento padrão */
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #f00;
+        
+        /* Propriedades de tempo transição quando ele volta ao seu estado normal após um :hover por exemplo */
+
+        transition-property: all; /* Isso seta qual propriedade irá ter esse tempo de transição de volta, podemos setar apenas o width, height, ou cores de background ou do elemento. As selecionadas retornaram no tempo de transição determinado, as que não forem selecionadas, retornarão ao seu estado original imediatamente. */
+
+        transition-duration: 1s; /* Determina em quanto tempo as propriedades selecionadas retornarão as suas propriedades originais pré definidas. */
+    }
+
+    .box-red:hover{
+        /* Propriedades que o elemento vai transformar conforme passamos o mouse em cima dele */
+        height: 200px;
+        width: 200px;
+        background-color: #00f;
+
+        /* Propriedades de tempo de transição, quanto tempo vai levar a transição e quais propriedades terão esse tempo de transição*/
+        transition-property: background-color, width; /* Aqui, não está "all", estão selecionados apenas background-color e width, deixando height de fora. Sendo assim, a largura e a cor farão transição no tempo determinado da propriedade abaixo, porém o height irá alterar-se imediatamente. */
+        transition-duration: 1s;
+    }
+</style>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!-- 
+    transition-delay: 4s (Quanto tempo de delay para a transição começar, e também voltar ao normal)
+ 
+    SHORTHAND:
+    transition: "property" / "delay" / "timing-function" / "delay";
+-->
+
+<html>
+    <head>
+        <title>CSS Transition</title>
+    </head>
+    
+    <body>
+        <div class="box-red"></div>
+    </body>
+    
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .box-red{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+
+            background-color: #f00;
+
+            /* Transition para voltar ao estado inicial */
+
+            /* SHORTHAND:
+            transition: "property" / "delay" / "timing-function" / "delay"; */
+            transition: background-color 1s ease 4s;
+        }
+
+        .box-red:hover{
+            background-color: #00f;
+            transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-out;
+
+            /* Quanto tempo de delay para a transição começar */
+            transition-delay: 4s;
+        }
+    </style>
+</html>

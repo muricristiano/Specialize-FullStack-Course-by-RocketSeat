@@ -1,0 +1,78 @@
+<!-- 
+
+    ease - Início, Meio rápido, final lento (este é o padrão)
+    linear - Mesma velocidade do início ao fim
+    ease-in - Início lento
+    ease-out - Final lento
+    ease-in-out - Início e fim lentos
+    cubic-bezier(n,n,n,n) - Permite definir seus próprios valores em uma função cubic-bezier
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Transition</title>
+</head>
+
+<body>
+    <div class="line ease">Ease</div>
+    <div class="line linear">Linear</div>
+    <div class="line ease-in">Ease-in</div>
+    <div class="line ease-out">Ease-out</div>
+    <div class="line ease-in-out">Ease-in-out</div>
+    <div class="line cubic-bezier">Cubic-bezier</div>
+</body>
+
+<style>
+    /* Propriedades iniciais de todas as linhas */
+    .line{
+        width: 100%;
+        background-color: #00f;
+        height: 25px;
+        margin-bottom: 10px;
+
+        /* Transições para retornar ao estado original */
+        transition: width;
+        transition-duration: 1s;
+    }
+
+
+    /* Propriedades ao passar o mouse em cima */
+
+    /* Ao passar o mouse em cima do BODY, os elementos LINE, terão as seguintes alterações... */
+    body:hover .line{
+        width: 20px;
+        background-color: #f0f;
+
+        transition-duration: 2s;
+    }
+
+
+
+    .ease{
+        transition-timing-function: ease; /* ease - DEFAULT - Início lento, Meio rápido, Final lento. */ 
+    }
+
+    .linear{
+        transition-timing-function: linear; /* linear - Mesma velocidade do início ao fim */
+    }
+
+    .ease-in{
+        transition-timing-function: ease-in;  /* easy-in - Início lento */
+    }
+
+    .ease-out{
+        transition-timing-function: ease-out; /* easy-out - Final lento */
+    }
+
+    .ease-in-out{
+        transition-timing-function: ease-in-out; /* easy-in-out - Início e Fim lentos */
+    }
+
+    .cubic-bezier{
+        transition-timing-function: cubic-bezier(5, 2, 1, 0.5); /* cubic-bezier - Permite personalizar com 4 valores (n,n,n,n) - Linear seria equivalente a 1,1,1,1 por exemplo - Aqui, iniciando muito rápido e o final bem devagar*/
+    }
+
+</style>
+ 
+</html>
