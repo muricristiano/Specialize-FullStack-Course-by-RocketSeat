@@ -1,0 +1,56 @@
+<!-- 
+
+    Transition property all - seta todas as propriedades para receberem o transition.
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>CSS Transition</title>
+ </head>
+ 
+ <body>
+     <!-- Criação do nosso elemento. -->
+ <div class="box-red"></div>
+ 
+ <style>
+     body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;   
+     }
+ 
+     
+     .box-red {
+         /* Propriedades do elemento padrão */
+         width: 100px;
+         height: 100px;
+         border-radius: 100%;
+         background-color: #f00;
+         
+        /* SHORTHAND: ao selecionar a transition propety como all, significa que irá fazer a transição de retorno de qualquer propriedade alterada com um efeito de :hover por exemplo */
+         transition: all; 
+
+         /*
+         
+            ou
+         transition-property: all
+         
+         */
+ 
+         transition-duration: 1s;
+     }
+ 
+     .box-red:hover{
+         /* Propriedades que o elemento vai transformar conforme passamos o mouse em cima dele */
+         height: 200px;
+         width: 200px;
+         background-color: #fa0;
+ 
+         /* Propriedades de tempo de transição, quanto tempo vai levar a transição e quais propriedades terão esse tempo de transição*/
+         transition: all 0.5s cubic-bezier(0.3, 1.1, 1, -2);
+     }
+ </style>
+     </body>
+ </html>

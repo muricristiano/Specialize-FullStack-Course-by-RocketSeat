@@ -1,0 +1,83 @@
+<!-- 
+
+    Opacity: de 0 à 1 (Podendo ser aplicados números entre 0.01 à 0.99)
+
+ -->
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>CSS Transition</title>
+ </head>
+ 
+ <body>
+     <!-- Criação do nosso elemento. -->
+ <div class="box yellow"></div>
+ <div class="box green"></div>
+ <div class="box orange"></div>
+ <div class="box blue"></div>
+ 
+ 
+ 
+ <style>
+     body {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         height: 100vh;   
+     }
+ 
+     
+     .box {
+         width: 100px;
+         height: 100px;
+         border-radius: 100%;
+         transition: all 0.5s;
+     }
+
+     .yellow {
+        background-color: #ff0;
+     }
+ 
+     .yellow:hover{
+         height: 150px;
+         width: 150px;
+         background-color: #f00;
+         transition: all 1s;
+      }
+
+      .green {
+        background-color: #0f0;
+      }
+
+      .green:hover{
+        height: 150px;
+        width: 150px;
+        background-color: #0af;
+        transition: all 1s;
+      }
+
+      .orange {
+        background-color: #fa0;
+      }
+
+      .orange:hover{
+        height: 150px;
+        width: 150px;
+        background-color: #f0f;
+        transition: all 1s;
+      }
+
+      .blue{
+        background: #00f;
+      }
+
+      .blue:hover{
+        height: 200px;
+        width: 200px;
+        background: #92f;
+        opacity: 0;
+        transition: all 1s;
+      }
+ </style>
+     </body>
+ </html>
