@@ -1,0 +1,77 @@
+<!-- 
+    
+    Podemos usar porcentagem para especificar de forma muito mais personalizável e exata no keyframes.
+
+    Baseado no tempo da animation-duration. Como serão as propriedades ao longo do percentual dessa duração da animação
+
+    @keyframes example{
+        0%{
+
+        }
+
+        33%{
+
+        }
+
+        66%{
+
+        }
+
+        100%{
+
+        }
+    }
+
+ -->
+
+ <html>
+    <head>
+        <title>CSS Animation</title>    
+    </head>
+    
+    <body>
+        <div class="ball"></div>
+    </body>
+
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: #f00;
+
+            position: relative;
+
+            animation-name: animation-two;
+            animation-duration: 5s;
+        }
+
+        @keyframes animation-one {
+            from {
+                background-color: blueviolet;
+            }
+
+            to {
+                background-color: rosybrown;
+            }
+        }
+
+        @keyframes animation-two {
+            0%{
+                background-color: blueviolet;
+            }
+
+            25%{
+                background-color: rosybrown;
+            }
+
+            50%{
+                background-color: blue;
+            }
+
+            100%{
+                background-color: yellow;
+            }
+        }
+    </style>
+</html>

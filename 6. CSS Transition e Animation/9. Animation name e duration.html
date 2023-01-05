@@ -1,0 +1,51 @@
+<!-- 
+    
+    @keyframes: Ferramenta para criar animações. Declara-se com um nome de animação que será usado no "animation-name" pelos elementos.
+
+    from {}: Propriedades iniciais da animação que o elemento receberá. (com finalidade de ser 0% a 100%)
+
+    to {}: Propriedades finais da animação que o elemento receberá. (com finalidade de ser 0% a 100%)
+
+
+    NO CSS DO ELEMENTO QUE SERÁ ANIMADO:
+    Animation-name: qual animação esse(s) elemento(s) receberá.
+    Animation-duration: qual a duração da animação que esse(s) elemento(s) receberá?
+
+ -->
+
+<html>
+    <head>
+        <title>CSS Animation</title>    
+    </head>
+    
+    <body>
+        <div class="ball"></div>
+    </body>
+
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: #f00;
+
+            position: relative;
+
+            animation-name: animation-one;
+            animation-duration: 5s;
+        }
+
+        /* Criação de animação e a definição do nome */
+        @keyframes animation-one {
+            /* FROM: como a animação vai começar */
+            from {
+                background-color: blueviolet;
+            }
+
+            /* TO: como a animação vai finalizar */
+            to {
+                background-color: rosybrown;
+            }
+        }
+    </style>
+</html>

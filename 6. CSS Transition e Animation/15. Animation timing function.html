@@ -1,0 +1,70 @@
+<!-- 
+    
+    animation-timing-function: (Velocidade/aceleração da animação)
+
+    ease - DEFAULT - slow/fast+/slow
+    easy-in - slow/fast/fast
+    easy-out - fast/fast/slow
+    easy-in-out - soft/mid/soft (Parecido com ease, porém mais estável e menos intenso)
+    linear - static speed (velocidade estática)
+
+    OBS: Ao usar alternate, a timing-function fica reversa no retorno, invertendo o efeito na volta (Se o início era lento e o fim rápido, o início será rapido e o fim lento, etc.)
+-->
+
+<html>
+    <head>
+        <title>CSS Animation</title>    
+    </head>
+    
+    <body>
+        <div class="ease">ease (default) <br> slow/fast+/slow</div>
+        <div class="ease-in">ease-in <br> slow/fast/fast</div>
+        <div class="ease-out">ease-out <br> fast/fast/slow</div>
+        <div class="ease-in-out">ease-in-out <br> soft/mid/soft</div>
+        <div class="linear">linear <br> static speed</div>
+    </body>
+
+    <style>
+        div{
+            width: 100px;
+            height: 50px;
+            background-color: blueviolet;   
+            position: relative;
+
+            animation-name: animation;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        .ease{
+            animation-timing-function: ease; /* Default */
+        }
+
+        .ease-in{
+            animation-timing-function: ease-in;
+        }
+
+        .ease-out{
+            animation-timing-function: ease-out;
+        }
+
+        .ease-in-out{
+            animation-timing-function: ease-in-out;
+        }
+
+        .linear{
+            animation-timing-function: linear;
+        }
+
+        @keyframes animation {
+            from{
+                left: 0px;
+            }
+            to{
+                left: calc(100% - 100px) /* -100px pois tamanho do nosso elemento é 100px, ele sumiria da tela se não colocassemos essa -100px */
+            }
+        }
+
+    </style>
+</html>

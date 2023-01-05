@@ -1,0 +1,80 @@
+<!-- 
+    
+    animation-iteration-count:
+        Quantidade de repetições da animação
+        1: repete uma vez apenas (default)
+        2: repete duas vezes, etc..
+        3...
+        4...
+
+        infinite: Irá executar a animação infinitamente.
+
+
+        OBS: Ignora o delay entre as execuções de repetição. Se quisermos fazer uma pausa devemos fazer manualmente no final/início da animação
+ -->
+
+ <html>
+    <head>
+        <title>CSS Animation</title>    
+    </head>
+    
+    <body>
+        <div class="ball"></div>
+    </body>
+
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: green;
+
+            position: relative;
+
+            animation-name: animation-two;
+            animation-duration: 4s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animation-one {
+            from {
+                background-color: blueviolet;
+            }
+
+            to {
+                background-color: rosybrown;
+            }
+        }
+
+        @keyframes animation-two {
+            0%{
+                left: 0px; 
+                top: 0px; 
+            }
+
+            25%{
+                background-color: yellow;
+                left: 400px;
+                top: 0px;
+            }
+
+            50%{
+                background-color: orange;
+                left: 400px;
+                top: 400px;
+            }
+
+            75%{
+                background-color: red;
+                left: 0;
+                top: 400px;
+            }
+
+            100%{
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</html>

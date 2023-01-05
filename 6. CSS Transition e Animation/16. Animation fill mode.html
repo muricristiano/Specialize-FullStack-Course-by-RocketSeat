@@ -1,0 +1,70 @@
+<!-- 
+
+    animation-fill-mode:
+
+    Values:
+        forwards: O elemento recebe e fica com as propriedades da última chave da animação.
+
+        backwards: Durante o período de delay, o elemento já irá receber as propriedades da primeira chave da animação.
+
+        both: O elemento já iniciará com as propriedades do início da animação incluindo o tempo do delay antes da animação começar. Além disso ficará com as propriedades finais da animação! O elemento recebe de forma fixa as propriedades finais alteradas na animação.
+
+ -->
+
+<html>
+    <head>
+        <title>CSS Animation</title>
+    </head>
+
+    <body>
+        <h1>animation-fill-mode:</h1>
+
+        <div class="ball forwards"><strong>FORWARDS</strong> <br> Fixa propriedades finais</div>
+
+        <div class="ball backwards"><strong>BACKWARDS</strong> <br> Recebe propriedades iniciais mesmo no delay</div>
+
+        <div class="ball both"><strong>BOTH</strong> <br> Fixa o final <br> Antecipa início</div>
+    </body>
+
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: green;
+            position: relative;
+
+            animation-name: animation-one;
+            animation-delay: 2s;
+            animation-duration: 4s;
+        }
+
+        .forwards{
+            /* forwards: O elemento recebe e fica com as propriedades da última chave da animação. */
+            animation-fill-mode: forwards;
+        }
+
+        .backwards{
+            /* backwards: Durante o período de delay, o elemento já irá receber as propriedades da primeira chave da animação. */
+            animation-fill-mode: backwards;
+        }
+            
+        .both{
+            /* both: O elemento já iniciará com as propriedades do início da animação incluindo o tempo do delay antes da animação começar. Além disso ficará com as propriedades finais da animação! O elemento recebe de forma fixa as propriedades finais alteradas na animação. */
+            animation-fill-mode: both;
+        }
+
+        @keyframes animation-one{
+            from{
+                left: 0px;
+                background-color: yellow;
+            }
+
+            to{
+                left: calc(100% - 100px);
+                background-color:red;
+            }
+        }
+    </style>
+
+</html>

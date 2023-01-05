@@ -1,0 +1,78 @@
+<!-- 
+    
+    position: relative;
+    Permite que utilizemos propriedades de posicionamento como left-right-bottom-top
+
+    Assim fazemos os movimentos dos elementos de forma gradual.
+    
+ -->
+
+ <html>
+    <head>
+        <title>CSS Animation</title>    
+    </head>
+    
+    <body>
+        <div class="ball"></div>
+    </body>
+
+    <style>
+        .ball{
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            background-color: green;
+
+            /* Permite que utilizemos propriedades de posicionamento como left-right-bottom-top */
+            position: relative;
+
+            animation-name: animation-two;
+            animation-duration: 10s;
+        }
+
+        @keyframes animation-one {
+            from {
+                background-color: blueviolet;
+            }
+
+            to {
+                background-color: rosybrown;
+            }
+        }
+
+        @keyframes animation-two {
+            0%{
+                /* Posição que inicia no 0% da duração da animação, inicia na cor original quando não definimos a propriedade aqui */
+                left: 0px; /* Necessário posição inicial mesmo sendo igual a original */
+                top: 0px; /* Pois é com a posição original setada no 0% que fará o "movimento" do elemento */
+            }
+
+            25%{
+                /* Propriedades de cor e de posição em 25% da duração da animação */
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50%{
+                /* Propriedades de cor e de posição em 50% da duração da animação */
+                background-color: orange;
+                left: 200px;
+                top: 200px;
+            }
+
+            75%{
+                /* Propriedades de cor e de posição em 75% da duração da animação */
+                background-color: red;
+                left: 0;
+                top: 200px;
+            }
+
+            100%{
+                /* Propriedades de posição em 100% e final da duração da animação, retorna a cor original quando não definimos uma aqui */
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</html>
